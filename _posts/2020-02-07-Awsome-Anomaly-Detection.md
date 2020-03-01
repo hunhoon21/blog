@@ -2,8 +2,14 @@
 * Keyword: novelty detection, anomaly detection, out-of-distribution detection, outlier detection
 * Conference: ICLR, ICML, NIPS, KDD, ICCV, CVPR  
   
-A list of awesome ML papers on anomaly detection in the order of years. Papers were collected from 6 big conferences (ICLR, ICML, NIPS, KDD, ICCV, CVPR) with 4 keywords(novelty detection, anomaly detection, out-of-distribution detection, outlier detection). Some don't have detection keyword but related to studying outliers. Inspired by [awesome-anomaly-detection from hoya012](https://github.com/hoya012/awesome-anomaly-detection).  
 _Last updated: 2020.2.6_  
+
+연도별로 Anomaly Detection 관련 논문들을 정리한 자료입니다. 시간 순으로 Anomaly Detection 관련 논문들이 어떻게 발전했는지, 또 얼마나 증가했는지 알아보고자 합니다. [이호성님 github awesome-anomaly-detection](https://github.com/hoya012/awesome-anomaly-detection) 을 보고 영감을 얻었습니다.   
+
+ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, Anomaly Detection, Out-of-Distribution Detection, Outlier Detection을 키워드로 찾은 논문들을 공유합니다. 일부 해당 키워드를 가지고 있지 않더라도 관련이 있어 보이는 논문들도 포함했습니다. (혹시 아무 관련 없어 보이는 논문이 있다면 말씀해 주세요:-) )  
+
+전체 submit/acceptance 논문 수가 많아지는 만큼, Anomaly Detection 관련 논문들도 해마다 증가하네요!
+
   
   
 ![Increase_of_AD_papers](../imgs/Increase_of_AD_papers.png)
