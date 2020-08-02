@@ -88,3 +88,88 @@
 <p><a href="http://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/" target="_blank" rel="noopener">해설 보러가기</a></p>
 </div>
     </div>
+
+
+## 나의 풀이
+* 마지막 셔틀이 가득 찼는지 확인하는 것이 포인트
+    * 마지막 셔틀이 다 찼으면, 마지막에 탄 사람 직전에 와야함
+    * 마지막 셔틀이 다 안 찼으면, 여유롭게 막차 시간에 오면 됨
+* 탈 수 있는 크루를 셔틀에 태우기 위해(pop 하기 위해) 자료구조 deque 사용
+
+마지막 셔틀을 확인하기 위해 아래와 같은 순서로 문제를 해결합니다.
+1. 정렬된 crew의 timetable 만들기 (`[(hour, min), (hour, min), ...]`)
+2. shuttle의 timetable 만들기 (`[(hour, min), (hour, min), ...]`)
+3. shuttle 순서에 따라 crew 태우기
+  * 마지막 shuttle의 경우 탄 crew 인원을 셉니다.
+4. 마지막 셔틀 검사하기
+  * 가득 찬 경우 마지막에 탄 크루 직전에 와야함
+  * 안 찬 경우 널널하게 막차 시간에 와도됨
+
+## 코드 풀이
+
+### 1. 정렬된 crew의 timetable 만들기
+`[(hour, min), (hour, min), ...]` 와 같은 구조로 crew의 timetable을 만들고 정렬합니다.
+```python
+from collections import deque
+
+
+def convert_timetable_with_tuple(timetable):
+    return [
+        (int(time[:2]), int(time[-2:])) for time in timetable
+    ]
+
+
+def sort_timetable(timetable):
+    timetable.sort(key=lambda time: time[1])
+    timetable.sort(key=lambda time: time[0])
+    return timetable
+
+
+crew_timetable = convert_timetable_with_tuple(crew_timetable)
+crew_timetable = sort_timetable(crew_timetable)
+crew_timetable = deque(crew_timetable)
+```
+
+### 2. shuttle의 timetable 만들기
+`[(hour, min), (hour, min), ...]` 와 같은 구조로 crew의 timetable을 만듭니다.
+```python
+def initialize_shuttle_timetable(n, t):
+    shuttle_timetable = [(9, 0)]
+    for i in range(n - 1):
+        before_hour, before_min = shuttle_timetable[-1]
+        after_hour, after_min = before_hour, before_min + t
+        if after_min >= 60:
+            after_hour, after_min = before_hour + 1, after_min - 60
+        shuttle_timetable.append((after_hour, after_min))
+    return shuttle_timetable
+shuttle_timetable = initialize_shuttle_timetable(n, t)
+```
+
+### 3. shuttle 순서에 따라 crew 태우기
+남은 크루가 있고, 셔틀에 탈 수 있으면 태웁니다. 막차의 경우엔 탑승한 인원을 셉니다.
+```python
+def can_take_shuttle(shuttle_time, crew_time):
+    # 셔틀 10시 대, 크루 9시 대
+    if crew_time[0] < shuttle_time[0]:
+        return True
+    # 셔틀 10시 10분, 크루 10시 10분 전
+    elif crew_time[0] == shuttle_time[0] and crew_time[1] <= shuttle_time[1]:
+        return True
+    return False
+
+
+crew_on_last_shuttle = 0
+for i, shuttle_time in enumerate(shuttle_timetable):
+    for _ in range(m):
+        # 남은 크루가 있고, 셔틀에 탈 수 있는 경우
+        if (
+            crew_timetable and
+            can_take_shuttle(shuttle_time, crew_timetable[0])
+        ):
+            the_last_crew_time = crew_timetable.popleft()
+            # 막차의 경우 탑승 인원 세기
+            if i == n - 1:
+                crew_on_last_shuttle += 1
+        else:
+            break
+```
