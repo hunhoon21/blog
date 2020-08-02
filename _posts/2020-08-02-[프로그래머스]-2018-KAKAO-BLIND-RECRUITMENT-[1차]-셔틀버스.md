@@ -96,7 +96,7 @@
     * 마지막 셔틀이 다 안 찼으면, 여유롭게 막차 시간에 오면 됨
 * 탈 수 있는 크루를 셔틀에 태우기 위해(pop 하기 위해) 자료구조 deque 사용
 
-마지막 셔틀을 확인하기 위해 아래와 같은 순서로 문제를 해결합니다.
+### 풀이 순서
 1. 정렬된 crew의 timetable 만들기 (`[(hour, min), (hour, min), ...]`)
 2. shuttle의 timetable 만들기 (`[(hour, min), (hour, min), ...]`)
 3. shuttle 순서에 따라 crew 태우기
@@ -105,9 +105,9 @@
   * 가득 찬 경우 마지막에 탄 크루 직전에 와야함
   * 안 찬 경우 널널하게 막차 시간에 와도됨
 
-## 코드 풀이
+### 코드 풀이
 
-### 1. 정렬된 crew의 timetable 만들기
+#### 1. 정렬된 crew의 timetable 만들기
 `[(hour, min), (hour, min), ...]` 와 같은 구조로 crew의 timetable을 만들고 정렬합니다.
 ```python
 from collections import deque
@@ -130,7 +130,7 @@ crew_timetable = sort_timetable(crew_timetable)
 crew_timetable = deque(crew_timetable)
 ```
 
-### 2. shuttle의 timetable 만들기
+#### 2. shuttle의 timetable 만들기
 `[(hour, min), (hour, min), ...]` 와 같은 구조로 crew의 timetable을 만듭니다.
 ```python
 def initialize_shuttle_timetable(n, t):
@@ -142,10 +142,12 @@ def initialize_shuttle_timetable(n, t):
             after_hour, after_min = before_hour + 1, after_min - 60
         shuttle_timetable.append((after_hour, after_min))
     return shuttle_timetable
+
+
 shuttle_timetable = initialize_shuttle_timetable(n, t)
 ```
 
-### 3. shuttle 순서에 따라 crew 태우기
+#### 3. shuttle 순서에 따라 crew 태우기
 남은 크루가 있고, 셔틀에 탈 수 있으면 태웁니다. 막차의 경우엔 탑승한 인원을 셉니다.
 ```python
 def can_take_shuttle(shuttle_time, crew_time):
@@ -173,3 +175,145 @@ for i, shuttle_time in enumerate(shuttle_timetable):
         else:
             break
 ```
+
+#### 4.1. 막차가 가득 찬 경우 마지막에 탄 크루 직전에 오기
+```python
+def get_the_time_just_before(time):
+    if time[1] == 0:
+        return convert_time_to_str((time[0] - 1, 59))
+    return convert_time_to_str((time[0], time[1] - 1))
+
+
+def convert_time_to_str(time_tuple):
+    hour, minute = str(time_tuple[0]), str(time_tuple[1])
+    hour, minute = pad_time_str(hour), pad_time_str(minute)
+    return '{}:{}'.format(hour, minute)
+
+
+def pad_time_str(time_str):
+    pad = '0' if len(time_str) == 1 else ''
+    return pad + time_str
+
+
+if crew_on_last_shuttle == m:
+    answer = get_the_time_just_before(
+        the_last_crew_time
+    )
+```
+
+
+#### 4.2. 막차가 안 찬 경우 널널하게 막차 시간에 오기
+```python
+def convert_time_to_str(time_tuple):
+    hour, minute = str(time_tuple[0]), str(time_tuple[1])
+    hour, minute = pad_time_str(hour), pad_time_str(minute)
+    return '{}:{}'.format(hour, minute)
+
+
+answer = convert_time_to_str(shuttle_timetable[-1])
+```
+
+
+### 제출 코드
+제출 코드는 다음과 같습니다.
+```python
+'''
+1. 사람들이 마지막 셔틀에 다 탄다 못탄다?
+ 1.1. 마지막 셔틀이 다 안 찼으면 마지막 셔틀 시간에 가면 됨
+ 1.2. 마지막 셔틀이 다 찼으면 마지막에 탄 사람보다 직전에 일찍 오면 됨
+'''
+
+
+from collections import deque
+
+
+def can_take_shuttle(shuttle_time, crew_time):
+    # 셔틀 10시 대, 크루 9시 대
+    if crew_time[0] < shuttle_time[0]:
+        return True
+    # 셔틀 10시 10분, 크루 10시 10분 전
+    elif crew_time[0] == shuttle_time[0] and crew_time[1] <= shuttle_time[1]:
+        return True
+    return False
+
+
+def get_the_time_just_before(time):
+    if time[1] == 0:
+        return convert_time_to_str((time[0] - 1, 59))
+    return convert_time_to_str((time[0], time[1] - 1))
+
+
+def pad_time_str(time_str):
+    pad = '0' if len(time_str) == 1 else ''
+    return pad + time_str
+
+
+def convert_time_to_str(time_tuple):
+    hour, minute = str(time_tuple[0]), str(time_tuple[1])
+    hour, minute = pad_time_str(hour), pad_time_str(minute)
+    return '{}:{}'.format(hour, minute)
+
+
+def convert_timetable_with_tuple(timetable):
+    return [
+        (int(time[:2]), int(time[-2:])) for time in timetable
+    ]
+
+
+def sort_timetable(timetable):
+    timetable.sort(key=lambda time: time[1])
+    timetable.sort(key=lambda time: time[0])
+    return timetable
+
+
+def initialize_shuttle_timetable(n, t):
+    shuttle_timetable = [(9, 0)]
+    for i in range(n - 1):
+        before_hour, before_min = shuttle_timetable[-1]
+        after_hour, after_min = before_hour, before_min + t
+        if after_min >= 60:
+            after_hour, after_min = before_hour + 1, after_min - 60
+        shuttle_timetable.append((after_hour, after_min))
+    return shuttle_timetable
+
+
+def solution(n, t, m, crew_timetable):
+    crew_on_last_shuttle = 0
+    
+    # crew_timetable: [(hour, min), (hour, min), ...]
+    crew_timetable = convert_timetable_with_tuple(crew_timetable)
+    crew_timetable = sort_timetable(crew_timetable)
+    crew_timetable = deque(crew_timetable)
+    
+    # shuttle_timetable: [(hour, min), (hour, min), ...]
+    shuttle_timetable = initialize_shuttle_timetable(n, t)
+    
+    for i, shuttle_time in enumerate(shuttle_timetable):
+        for _ in range(m):
+            if (
+                crew_timetable and 
+                can_take_shuttle(shuttle_time, crew_timetable[0])
+            ):
+                # 크루 버스에 태우기
+                the_last_crew_time = crew_timetable.popleft()
+
+                # 막차인 경우는 타는 크루 인원 세기
+                if i == n - 1:
+                    crew_on_last_shuttle += 1
+            else:
+                break    
+    
+    # 막차가 가득 찬 경우 마지막에 탄 크루 직전에 오기
+    if crew_on_last_shuttle == m:
+        return get_the_time_just_before(
+            the_last_crew_time
+        )
+    # 막차가 안 찬 경우 널널하게 막차 시간에 오기
+    return convert_time_to_str(shuttle_timetable[-1])
+```
+
+### 느낀점 및 개선 방향
+* 시간을 어떻게 나타낼까 고민이 됐습니다.
+* crew와 shuttle의 시간을 두개의 int가 담긴 튜플 형태로 나타냈는데, 분 단위의 int로도 처리할 수 있을 것 같습니다.
+  * 분 단위의 int로 하면 비교가 훨씬 간단해집니다.
+* crew를 shuttle에 태우는 과정에서 남은 crew가 없으면 바로 막차 시간을 리턴해도 될 것 같습니다.
