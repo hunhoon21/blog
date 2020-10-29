@@ -49,10 +49,9 @@ ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, An
 - Further Analysis of Outlier Detection with Deep Generative Models | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2010.13064.pdf)
 - Likelihood Regret: An Out-of-Distribution Detection Score For Variational Auto-encoder | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2003.02977.pdf)
 - OOD-MAML: Meta-Learning for Few-Shot Out-of-Distribution Detection and Classification | __[NIPS]__ |
-- Energy-based Out-of-distribution Detection [pdf](https://arxiv.org/pdf/2010.03759.pdf)
-- Towards Maximizing the Representation Gap between In-Domain & Out-of-Distribution Examples [pdf](https://arxiv.org/pdf/2010.10474.pdf)
-- Why Normalizing Flows Fail to Detect Out-of-Distribution Data [pdf](https://invertibleworkshop.github.io/accepted_papers/pdfs/20.pdf)
-
+- Energy-based Out-of-distribution Detection | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2010.03759.pdf)
+- Towards Maximizing the Representation Gap between In-Domain & Out-of-Distribution Examples | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2010.10474.pdf)
+- Why Normalizing Flows Fail to Detect Out-of-Distribution Data | __[NIPS]__ | [pdf](https://invertibleworkshop.github.io/accepted_papers/pdfs/20.pdf)
 
 
 # 2019 (34 papers)
