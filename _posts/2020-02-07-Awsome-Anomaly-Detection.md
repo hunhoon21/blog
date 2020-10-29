@@ -3,7 +3,7 @@
 * Conference: ICLR, ICML, NIPS, KDD, ICCV, CVPR  
   
 
-_Last updated: 2020.2.6_  
+_Last updated: 2020.10.29_  
 
 연도별로 Anomaly Detection 관련 논문들을 정리한 자료입니다. 시간 순으로 Anomaly Detection 관련 논문들이 어떻게 발전했는지, 또 얼마나 증가했는지 알아보고자 합니다. [이호성님 github awesome-anomaly-detection](https://github.com/hoya012/awesome-anomaly-detection) 을 보고 영감을 얻었습니다.   
 
