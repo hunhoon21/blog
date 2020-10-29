@@ -52,7 +52,8 @@ ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, An
 - Energy-based Out-of-distribution Detection | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2010.03759.pdf)
 - Towards Maximizing the Representation Gap between In-Domain & Out-of-Distribution Examples | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2010.10474.pdf)
 - Why Normalizing Flows Fail to Detect Out-of-Distribution Data | __[NIPS]__ | [pdf](https://invertibleworkshop.github.io/accepted_papers/pdfs/20.pdf)
-
+- Interpretable, Multidimensional, Multimodal Anomaly Detection with Negative Sampling for Detection of Device Failure | __[ICML]__ | [pdf](https://arxiv.org/pdf/2007.10088.pdf)
+- Detecting Out-of-Distribution Examples with Gram Matrices | __[ICML]__ | [pdf](https://proceedings.icml.cc/static/paper_files/icml/2020/5813-Paper.pdf)
 
 # 2019 (34 papers)
 
