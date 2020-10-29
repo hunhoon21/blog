@@ -2,6 +2,7 @@
 * Keyword: novelty detection, anomaly detection, out-of-distribution detection, outlier detection
 * Conference: ICLR, ICML, NIPS, KDD, ICCV, CVPR  
   
+
 _Last updated: 2020.2.6_  
 
 연도별로 Anomaly Detection 관련 논문들을 정리한 자료입니다. 시간 순으로 Anomaly Detection 관련 논문들이 어떻게 발전했는지, 또 얼마나 증가했는지 알아보고자 합니다. [이호성님 github awesome-anomaly-detection](https://github.com/hoya012/awesome-anomaly-detection) 을 보고 영감을 얻었습니다.   
@@ -11,14 +12,14 @@ ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, An
 전체 submit/acceptance 논문 수가 많아지는 만큼, Anomaly Detection 관련 논문들도 해마다 증가하네요!
 
   
-  
+
 ![Increase_of_AD_papers](../imgs/Increase_of_AD_papers.png)
-  
-  
+
+
 |      |           |   ICLR   |           |           |   NIPS   |            |           |   ICML   |           |           |   KDD    |           |           |   ICCV   |           |           |   CVPR   |           |           |  Total   |           |
 | :--: | :-------: | :------: | :-------: | :-------: | :------: | :--------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: |
 |      | submitted | accepted | AD-papers | submitted | accepted | AD-papers | submitted | accepted | AD-papers | submitted | accepted | AD-papers | submitted | accepted | AD-papers | submitted | accepted | AD-papers | submitted | accepted | AD-papers |
-| 2020 |   2594    |   687    |    10     |     0     |    0     |     0      |     0     |    0     |     0     |     0     |    0     |     0     |     0     |    0     |     0     |     0     |    0     |     0     |   2594    |   687    |    10     |
+| 2020 |   2594    |   687    |    10     |   9467    |   1900   |     7     |   4990    |  1,088   |     2     |   1279    |   216    |     5     |     0     |    0     |     0     |   6656    |   1470   |     4     |   24986   |  5,361   |    28     |
 | 2019 |   1591    |   500    |     1     |   6743    |   1428   |     8      |   3424    |   773    |     3     |   1200    |   170    |     8     |   4303    |   1077   |     4     |   5160    |   1294   |    10     |   22421   |   5242   |    34     |
 | 2018 |    941    |   314    |     3     |   4856    |   1011   |     6      |   2473    |   621    |     1     |    983    |   181    |     7     |     0     |    0     |     0     |   3303    |   979    |     4     |   12556   |   3106   |    21     |
 | 2017 |    507    |   198    |     5     |   3240    |   678    |     1      |   1676    |   434    |     0     |    748    |   130    |     6     |   2143    |   621    |     3     |   2620    |   783    |     2     |   10934   |   2844   |    17     |
@@ -28,8 +29,7 @@ ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, An
 | 2013 |           |          |           |           |          |     2      |           |          |           |           |          |     1     |   1629    |   454    |     0     |           |          |     3     |   1629    |   454    |     6     |
 | 2012 |           |          |           |           |          |     1      |           |          |           |           |          |     2     |           |          |           |           |          |           |     0     |    0     |     3     |
 | 2011 |           |          |           |           |          |     2      |           |          |           |           |          |     1     |           |          |           |           |          |           |     0     |    0     |     3     |
-|      |   5633    |   1699   |    19     |   20758   |   4503   |     22     |   8610    |   2420   |     9     |   5901    |   934    |    35     |   9773    |   2677   |     9     |   17158   |   4841   |    23     |   67833   |  17074   |    117    |
-
+|      |   5633    |   1699   |    19     |   30225   |   6403   |    29     |   13600   |   3508   |    11     |   7180    |   1150   |    40     |   9773    |   2677   |     9     |   23814   |   6311   |    27     |   90225   |  21748   |    135    |
 
 # 2020 (10 papers)
 
