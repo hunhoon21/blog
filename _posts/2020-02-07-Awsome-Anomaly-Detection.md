@@ -43,6 +43,15 @@ ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, An
 - Learning to Balance: Bayesian Meta-Learning for Imbalanced and Out-of-distribution Tasks(ORAL) | __[ICLR]__ | [pdf](https://openreview.net/pdf?id=rkeZIJBYvr)
 - Iterative energy-based projection on a normal data manifold for anomaly localization | __[ICLR]__ | [pdf](https://openreview.net/pdf?id=HJx81ySKwr)
 - Neural Outlier Rejection for Self-Supervised Keypoint Learning | __[ICLR]__ | [pdf](https://openreview.net/pdf?id=Skx82ySYPH)
+- Understanding Anomaly Detection with Deep Invertible Networks through Hierarchies of Distributions and Features | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2006.10848.pdf)
+- Timeseries Anomaly Detection using Temporal Hierarchical One-Class Network | __[NIPS]__ |
+- CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2007.08176.pdf)
+- Further Analysis of Outlier Detection with Deep Generative Models | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2010.13064.pdf)
+- Likelihood Regret: An Out-of-Distribution Detection Score For Variational Auto-encoder | __[NIPS]__ | [pdf](https://arxiv.org/pdf/2003.02977.pdf)
+- OOD-MAML: Meta-Learning for Few-Shot Out-of-Distribution Detection and Classification | __[NIPS]__ |
+- Energy-based Out-of-distribution Detection [pdf](https://arxiv.org/pdf/2010.03759.pdf)
+- Towards Maximizing the Representation Gap between In-Domain & Out-of-Distribution Examples [pdf](https://arxiv.org/pdf/2010.10474.pdf)
+- Why Normalizing Flows Fail to Detect Out-of-Distribution Data [pdf](https://invertibleworkshop.github.io/accepted_papers/pdfs/20.pdf)
 
 
 
