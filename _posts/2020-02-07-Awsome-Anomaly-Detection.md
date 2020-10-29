@@ -54,6 +54,12 @@ ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, An
 - Why Normalizing Flows Fail to Detect Out-of-Distribution Data | __[NIPS]__ | [pdf](https://invertibleworkshop.github.io/accepted_papers/pdfs/20.pdf)
 - Interpretable, Multidimensional, Multimodal Anomaly Detection with Negative Sampling for Detection of Device Failure | __[ICML]__ | [pdf](https://arxiv.org/pdf/2007.10088.pdf)
 - Detecting Out-of-Distribution Examples with Gram Matrices | __[ICML]__ | [pdf](https://proceedings.icml.cc/static/paper_files/icml/2020/5813-Paper.pdf)
+- Isolation Distributional Kernel: A new tool for kernel based anomaly detection | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403062)
+- USAD : UnSupervised Anomaly Detection on multivariate time series | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403392)
+- Multi-class Data Description for Out-of-distribution Detection | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403189)
+- Generic Outlier Detection in Multi-Armed Bandit | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403134) 
+- Ultrafast Local Outlier Detection from a Data Stream with Stationary Region Skipping | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403171)
+
 
 # 2019 (34 papers)
 
