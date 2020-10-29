@@ -59,7 +59,10 @@ ICLR, ICML, NIPS, KDD, ICCV, CVPR 총 6개의 학회에서 Novelty Detection, An
 - Multi-class Data Description for Out-of-distribution Detection | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403189)
 - Generic Outlier Detection in Multi-Armed Bandit | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403134) 
 - Ultrafast Local Outlier Detection from a Data Stream with Stationary Region Skipping | __[KDD]__ | [pdf](https://dl.acm.org/doi/pdf/10.1145/3394486.3403171)
-
+- Graph Embedded Pose Clustering for Anomaly Detection | __[CVPR]__ | [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Markovitz_Graph_Embedded_Pose_Clustering_for_Anomaly_Detection_CVPR_2020_paper.pdf)
+- Uninformed Students: Student-Teacher Anomaly Detection With Discriminative Latent Embeddings | __[CVPR]__ | [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Bergmann_Uninformed_Students_Student-Teacher_Anomaly_Detection_With_Discriminative_Latent_Embeddings_CVPR_2020_paper.pdf)
+- Learning Memory-Guided Normality for Anomaly Detection | __[CVPR]__ | [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Park_Learning_Memory-Guided_Normality_for_Anomaly_Detection_CVPR_2020_paper.pdf)
+- Self-Trained Deep Ordinal Regression for End-to-End Video Anomaly Detection | __[CVPR]__ | [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Pang_Self-Trained_Deep_Ordinal_Regression_for_End-to-End_Video_Anomaly_Detection_CVPR_2020_paper.pdf)
 
 # 2019 (34 papers)
 
